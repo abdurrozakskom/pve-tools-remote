@@ -7,16 +7,14 @@ remote Proxmox VE Tools dari komputer lain
 git clone https://github.com/abdurrozakskom/pve-tools-remote.git
 cd pve-tools-remote
 chmod +x *.sh
+chmod +x pve-tools-remote.sh install-pve-remote.sh setup-pve-remote.sh
 ```
 
 ## Install tools:
 ```bash
-sudo ./install-pve-remote.sh
-```
-
-## Setup SSH keys (jika belum):
-```bash
-./setup-ssh-keys.sh
+./setup-pve-remote.sh
+# atau
+pve-remote --setup
 ```
 
 ## Jalankan tools:
@@ -26,15 +24,14 @@ pve-remote
 
 # Fitur Remote Version:
 ```bash
-✅ Koneksi SSH ke multiple Proxmox VE hosts
-✅ Konfigurasi persistensi - simpan setting koneksi
-✅ Test koneksi sebelum eksekusi command
-✅ Semua fitur local tersedia secara remote
-✅ Logging aktivitas remote
-✅ Security dengan SSH key authentication
-✅ Flexible - bisa ganti host kapan saja
-✅ View system logs remote
-✅ Error handling untuk koneksi gagal
+✅ SSH Key Authentication - Otomatis generate dan setup SSH key
+✅ Error Handling - Handle koneksi gagal dengan lebih baik
+✅ Connection Testing - Test koneksi sebelum eksekusi command
+✅ Better Logging - Logging yang lebih informatif
+✅ User Friendly - Pesan error dan success yang jelas
+✅ Auto-retry - Option untuk setup SSH key jika koneksi gagal
+✅ Configuration Management - Simpan dan load config
+✅ Status Monitoring - Cek status koneksi
 ```
 
 # Contoh Tampilan Remote:
